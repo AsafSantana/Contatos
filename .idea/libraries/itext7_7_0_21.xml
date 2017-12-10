@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="itext7-7.0.21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/br/ufms/contatos/itext7-7.0.2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

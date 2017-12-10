@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run290190960/lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run290190960/lib/iText-5.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run290190960/lib/mysql-connector-java-5.1.23-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

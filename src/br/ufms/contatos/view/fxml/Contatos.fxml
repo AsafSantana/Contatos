@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="871.0" style="-fx-background-image: url(&quot;/br/ufms/contatos/imagem/fundo.jpg&quot;);" styleClass="imagem" stylesheets="br/ufms/contatos/view/css/Stile.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufms.contatos.view.controller.ContatosController">
+   <children>
+      <VBox alignment="CENTER" layoutX="7.0" layoutY="-3.0" opacity="0.71" prefHeight="610.0" prefWidth="372.0">
+         <children>
+            <TextField fx:id="pesquisar" promptText="Pesquisar" />
+            <JFXListView fx:id="lista" editable="true" onMouseClicked="#clicarMouseListView" prefHeight="519.0" prefWidth="372.0" styleClass="jfxtext-field">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <effect>
+                  <Blend />
+               </effect>
+            </JFXListView>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+        
+         <effect>
+            <InnerShadow color="#000000eb" />
+         </effect>
+      </VBox>
+      <HBox layoutX="389.0" layoutY="9.0" prefHeight="610.0" prefWidth="482.0">
+         <children>
+            <AnchorPane prefHeight="610.0" prefWidth="515.0">
+               <children>
+                  <JFXButton fx:id="editar" layoutX="296.0" layoutY="464.0" mnemonicParsing="false" onAction="#clicouEditar" style="-fx-background-color: #9A3442;" text="Editar" textFill="#f8f7f7" />
+                  <JFXButton fx:id="adicionar" layoutX="200.0" layoutY="464.0" mnemonicParsing="false" onAction="#clicouAdicionar" style="-fx-background-color: #9A3442;" text="Adicionar" textFill="#fffbfb" />
+                  <JFXButton fx:id="excluir" layoutX="360.0" layoutY="464.0" mnemonicParsing="false" onAction="#clicouExcluir" style="-fx-background-color: #9A3442;" text="Excluir" textFill="#f8f1f1" />
+                  <JFXButton fx:id="salvar" layoutX="310.0" layoutY="565.0" mnemonicParsing="false" onAction="#clicouSalvar" prefHeight="11.0" prefWidth="77.0" style="-fx-background-color: #9A3442;" text="Salvar" textFill="#ebe4e4">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#000000b0" />
+                     </effect>
+                     <font>
+                        <Font name="HP Simplified" size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="cancelar" layoutX="396.0" layoutY="565.0" mnemonicParsing="false" onAction="#clicouCancelar" style="-fx-background-color: #9A3442;" text="Cancelar" textFill="#fcfafa" textOverrun="CLIP" wrapText="true">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <font>
+                        <Font name="HP Simplified" size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="relatorio" layoutX="14.0" layoutY="565.0" mnemonicParsing="false" style="-fx-background-color: #9A3442;" text="Gerar PDF" textOverrun="CLIP" wrapText="true">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#f2ebeb" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="HP Simplified" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="telefone" layoutX="120.0" layoutY="327.0" prefHeight="31.0" prefWidth="271.0" promptText="Telefone">
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <TextField fx:id="email" layoutX="120.0" layoutY="383.0" prefHeight="31.0" prefWidth="271.0" promptText="E-mail">
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <TextField fx:id="nome" layoutX="120.0" layoutY="267.0" prefHeight="31.0" prefWidth="271.0" promptText="Nome">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="27.22" radius="11.555" />
+                     </effect></TextField>
+                  <JFXButton fx:id="fechar" layoutX="434.0" layoutY="-11.0" prefHeight="42.0" prefWidth="38.0" text="X" textFill="#e4dfdf" textOverrun="LEADING_ELLIPSIS">
+                     <font>
+                        <Font name="Microsoft Tai Le Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="imagem" fitHeight="197.0" fitWidth="200.0" layoutX="160.0" layoutY="47.0" pickOnBounds="true">
+                     <image>
+                        <Image url="br/ufms/contatos/imagem/icone.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

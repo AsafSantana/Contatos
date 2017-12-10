@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Contatos">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Contatos.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
